@@ -7,4 +7,5 @@ import 'package:styles/style/src/medium_font.dart';
 part 'src/colors.dart';
 part 'src/fonts.dart';
 part 'src/style.dart';
+part 'src/decoration_box.dart';
 

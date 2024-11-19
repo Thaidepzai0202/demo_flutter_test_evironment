@@ -17,8 +17,8 @@ AppColors _darkTheme = _TTDarkTheme();
 AppColors _lightTheme = _TTLightTheme();
 
 class _TTThemeData {
-  // AppColors color = _lightTheme;
-  AppColors color = _darkTheme;
+  AppColors color = _lightTheme;
+  // AppColors color = _darkTheme;
   ThemeFont font = ThemeFont();
 
   registerNotifyUpdated(BuildContext context) =>
@@ -50,12 +50,9 @@ class ThemeManager extends InheritedWidget {
 
   static updateThemMode({required bool isDarkMode}) {
     //update mode dark light
-    // print("theme : change : $isDarkMode $isDarkLight $brightness");
     _brightness = isDarkMode ? Brightness.dark : Brightness.light;
-    // setStyleDefault();
     final color = (_brightness == Brightness.light) ? _lightTheme : _darkTheme;
     _themeData._update(color: color);
-    // print("theme : change : $isDarkMode $isDarkLight $brightness");
   }
 
   static _TTThemeData get current => _themeData;
